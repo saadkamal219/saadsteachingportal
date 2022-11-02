@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saad's Teaching Portal</title>
+    <link rel="shortcut icon" type="image" href="ceo 1.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,500;0,700;0,900;1,100;1,500;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.2/css/fontawesome.min.css">
+</head>
+<body>
+
+    <!-- front view -->
+    
+    <section class="header">
+
+        <nav>
+            
+            <h1><snap class="s">S</snap>aad's <snap class="t">T</snap>eaching <snap class="p">P</snap>ortal</h1>
+
+            <div class="navigation-links">
+
+                <ul>
+                    
+                    <li><a href="index.html">Home</a> </li>
+                    <li><a href="courses.html">Courses</a> </li>
+                    <li><a href="notes.html">Notes</a> </li>
+                    <li><a href="blogs.html">Blogs</a> </li>
+                    <li><a href="contact.html">Contact</a> </li>
+                    <li><a href="about.html" target="_blank">About</a> </li>
+                    <li><a href="my-gadget.html">My Gadgets</a> </li>
+
+                </ul>
+
+            </div>
+
+        </nav>
+        
+    </section>
+
+    <hr color="#929292" size="2px">
+
+    <section class="git-github-body">
+
+        <div class="access-bar">
+
+            <h4><a href="blogs.html">Blogs</a> > Setup Git and Github for Ubuntu Linux [ Version 20.04 ]</h4>
+
+        </div>
+
+        <div class="content">
+            
+            <h1>What is git ?</h1>
+
+            <p>Git is a distributed <strong>version control system</strong> for tracking changes in source code during software development. <strong>Version control system</strong> si a manager tool that saves every changes that a developer makes during the development of  a software and I f he want to undo any change he can access any previous version if he uses git. So, It is designed for coordinating work among programmers, but it can be used to track changes in any set of files.</p> <br>
+            <p>Git was originally authored by <strong>Linus Torvalds</strong> in <strong>2005</strong> for development of the Linux kernel, with other kernel developers contributing to its initial development. Since 2005, Junio Hamano has been the core maintainer.</p>
+
+            <h1>What is github ?</h1>
+
+            <p>GitHub is a web-based Git repository hosting service, which offers all of the distributed revision control and source code management (SCM) functionality of Git as well as adding its own features. Github also allows to host a website using a git repository provided by <strong>Github Pages</strong>.</p> <br><br>
+            
+            <p>To use github first of all we have to install git to our device. After installing git, we will mark the file we want to save to github and wuill upload that. Please follow the steps bellow.</p>
+
+            <h1>Installation setps for git</h1> 
+
+            <p>First, update local package index.</p>
+
+            <div class="command">
+                
+                <p><snap class="color">sudo apt</snap> update</p>
+
+            </div>
+
+            <p>With the update complete, install git.</p>
+
+            <div class="command">
+                
+                <p><snap class="color">sudo apt install git</snap></p>
+
+            </div>
+
+            <p>Confirm the installation by running the following command and matching the output format.</p>
+
+            <div class="command">
+                
+                <p><snap class="color">git</snap> --version</p>
+
+            </div>
+
+            <div class="command">
+                
+                <p><snap class="color-output">Output: </snap></p><br>
+                <p>git version 2.25.1</p>
+
+            </div>
+
+            <h1>Setting up git</h1> 
+
+            <p>We need to config our information like name and email address. We can manage this process by <strong>git config</strong> command. We must set our name and email address because git embeds this imformation into each commit. Follow the steps.</p>
+
+            <div class="command">
+                
+                <p><snap class="color">git</snap> config --global user.name <snap class="color2">"your name"</snap></p>
+                <p><snap class="color">git</snap> config --global user.email <snap class="color2">"youremail@domain.com"</snap></p>
+
+            </div>
+
+            <p>Configaration is done. Now we can display the information by following command.</p>
+
+            <div class="command">
+                
+                <p><snap class="color">git</snap> config --list</p>
+
+            </div>
+
+            <div class="command">
+                
+                <p><snap class="color-output">Output: </snap></p>
+                <br>
+                <p>user.name=<snap class="color2">Your Name</snap></p>
+                <p>user.email=<snap class="color2">youremail@domain.com</snap></p>
+
+            </div>
+
+            <p>The information is stored in git configaration file. We can optionally edit by ourselves with a text editor ( nano )</p>
+
+            <div class="command">
+                
+                <p><snap class="color">nano</snap> ~/.gitconfig</p>
+
+            </div>
+
+            <div class="command">
+                
+                <p>[ user ]</p><br>
+
+                <p style="padding-left: 75px;">name = <snap class="color2">Your Name</snap></p>
+                <p style="padding-left: 75px;">email = <snap class="color2">youremail@gmail.com</snap></p>
+
+            </div>
+
+            <p>We can exit the text editor by pressing <strong>ctrl</strong> and <strong>x</strong>, then <strong>y</strong> then <strong>enter</strong>.</p>
+
+            <br><br>
+
+            <p>Now we have installed git. Now we will learn how to upload a file to github using git. </p>
+
+            <h1 style="font-size: 35px">Uploading a File on github</h1> 
+
+            <p>To upload a file on github, first of all we need to create an account at <a href="https://github.com" target="_blank">github</a>. We can create out account using gmail. We have set outr username and password. After finishing the creation of account on github, follow the steps bellow.</p>
+
+            <br>
+
+            <p>This is the home page of github. When we say we will upload a file on github, we actually mean that we will upload a file in a github repository. So, first of all we have to cearte a repository.</p>
+
+            <img src="first.png" alt="">
+
+            <p>We can create a new repository by clicking the first and second <snap style="color: red">red marked</snap> buttons. The first mark will lead us to the next page but the second mark will aloow us to create a repository on the home page. </p>
+
+            <img src="second.png" alt="">
+
+            <p>By entering the repository name on the <snap style="color: rgb(211, 211, 36)">yellow marked</snap> text bar, and setting the privacy, we can instantly create a repository. But the first <snap style="color: red">red marked</snap> button will lead us to page bellow.</p>
+
+            <img src="third.png" alt="">
+
+            <p>At step 2, we have to create a README file so that the repository can have a level on it.</p>
+            <br>
+            <p>By completing the whole process we will create a new repository. Let's asume that the repository name will be <strong>firstRepository</strong>.</p>
+
+            <img src="forth.png" alt="">
+
+            <p>Here the <snap style="color: orange">orange marked</snap> text is the repository name. Now, we have to <strong>clone</strong> the repository to local device. To do so, we have click the <snap style="color: rgb(14, 185, 28)">green marked</snap> button. The button will show the options bellow.</p>
+
+            <img src="fifth.png" alt="">
+
+            <p>We have to copy the <strong>HTTPS</strong> link to clone the repository.</p>
+
+            <br>
+
+            <p>Let's go to the desktop folder of the computer. </p>
+
+            <div class="command">
+                
+                <p>cd Desktop</p>
+
+            </div>
+
+            <p>Now we are at the Desktop folder. To clone the repository, we need to initialize git to the folder. We can do the process somewhere else also. We can initialize git by using <strong>init</strong> command.</p>
+
+            <div class="command">
+                
+                <p><snap class="color">git</snap> init</p>
+
+            </div>
+
+            <div class="command">
+                
+                <p><snap class="color-output">Output: </snap></p><br>
+                <p>Initialized empty Git repository in home/saad/Desktop/.git</p>
+
+            </div>
+
+            <p><strong>.git</strong> is a hidden folder. It says that the Dekstop folder is under the monitization of <strong>git</strong>.If you again initialize git in the same folder, the output will be like: </p>
+
+            <div class="command">
+                
+                <p><snap class="color-output">Output: </snap></p><br>
+                <p>Reinitialized existing Git repository in /home/saad/Desktop/.git/</p>
+
+            </div>
+
+            <p>Now we have to clone the remote repository to local device using <strong>clone</strong> command. We have paste the previous <strong>HTTPS</strong> link after the command. </p>
+
+            <div class="command">
+                
+                <p><snap class="color">git clone</snap> https://github.com/saadkamal219/firstRepository.git</p>
+
+            </div>
+
+            <p>We can paste the command by pressing <strong>ctrl</strong> and <strong>shift</strong> and <strong>v</strong> int the terminal.</p>
+
+            <p>After running the command, we will have a folder in Desktop named <strong>firstRepository</strong>. Let's enter the folder.</p>
+
+            <div class="command">
+                
+                <p>cd firstRepository</p>
+
+            </div>
+
+            <p>Let's create a text file in the folder.</p>
+
+            <div class="command">
+                
+                <p>touch hello.txt</p>
+
+            </div>
+
+            <p>Now we will upload it on github. We can check the status of the progress by, <strong>status</strong> command.</p>
+            
+            <div class="command">
+                
+                <p><snap class="color">git</snap> status</p>
+
+            </div>
+
+            <div class="command">
+                
+                <p><snap class="color-output">Output: </snap></p><br>
+                <p>On branch main</p>
+                <p>Your branch is up to date with 'origin/main'</p><br>
+                <p>Untracked files: </p>
+                <p style="padding-left: 75px;">(use "git add [ files ] ....." to include in what will be commited)</p>
+                <p style="padding-left: 115px;"><snap style="color: rgb(255, 0, 0)">hello.txt</snap></p> <br>
+                <p>nothing added to commit but untracked files present ( use "git add" to track )</p>
+
+            </div>
+
+            <p>When we create a repository, by default it is created at main branch. Untracked file means that this file has not been added. So to add a file we can use commands bellow: </p><br>
+
+            <p>When there are multiple files and you want to add al of them at once.</p>
+
+            <div class="command">
+                
+                <p><snap class="color">git add</snap> --all</p>
+
+            </div>
+
+            <div class="command">
+                
+                <p><snap class="color">git add</snap> --A</p>
+
+            </div>
+
+            <p>Another command to add all files together.</p>
+
+            <div class="command">
+                
+                <p><snap class="color">git add</snap> .</p>
+
+            </div>
+
+            <p>Suppose there are multiple files and you want to add one particuler file. Follow the command.</p>
+
+            <div class="command">
+                
+                <p><snap class="color">git add</snap> "filename.extension"</p>
+
+            </div>
+
+            <p>To undo the adding process we can run the command bellow.</p>
+
+            <div class="command">
+                
+                <p><snap class="color">git </snap>reset</p>
+
+            </div>
+
+            <p>After adding the file, we have to commit the changes to the branch. We can commit a file using <strong>commit</strong> command. We can also add some message while commiting.</p>
+
+            <div class="command">
+                
+                <p><snap class="color">git commit</snap> -m "message"</p>
+
+            </div>
+
+            <div class="command">
+                
+                <p><snap class="color-output">Output: </snap></p><br>
+                <p>[ main ] first repo</p>
+                <p style="padding-left: 75px;">1 file changed, 0 insertions ( + ), 0 deletions ( - )</p>
+                <p style="padding-left: 75px;">create mode 100644 hello.txt</p>
+
+            </div>
+
+            <p>If we check the status</p>
+
+            <div class="command">
+                
+                <p><snap class="color">git</snap> status</p>
+
+            </div>
+
+            <div class="command">
+                
+                <p><snap class="color-output">Output: </snap></p><br>
+                <p>On branch main</p>
+                <p>Your branch is ahead of 'origin/main' by 1 commit.</p>
+                <p style="padding-left: 75px;">( use "git push" to publish your local commits )</p><br>
+                <p>nothing to commit, working tree clean</p>
+
+            </div>
+
+            <p>Now we have a confirmation that all our files have been commited and our working path is clean. Now we have to push the file to main branch using <strong>push</strong> command.</p>
+
+            <div class="command">
+                
+                <p><snap class="color">git push origin </snap>main</p>
+
+            </div>
+
+            <p>After that it will ask for your username and password. Type those and hit enter button. Your push will be done. </p><br>
+
+            <p>Upload is complete. So, if we check the status now.</p>
+
+            <div class="command">
+                
+                <p><snap class="color">git </snap>status</p>
+
+            </div>
+
+            <div class="command">
+                
+                <p><snap class="color-output">Output: </snap></p><br>
+                <p>On branch main</p>
+                <p>Your branch is ahead of 'origin/main' by 1 commit.</p><br>
+                <p>nothing to commit, working tree clean</p>
+
+            </div>
+
+            <p>Ok, our uploading is successful. Now we need to go the github and reload the page. After realoding, we will be able to see our "hello.txt" file.</p>
+
+            <img src="six.png" alt="">
+
+            <h1>Deleting the repository</h1>
+            
+            <p>First of all we have to go the repository we want to delete. Then go to settings. </p>
+
+            <img src="seven.png" alt="">
+
+            <p>The settings will open up a page like bellow: </p>
+
+            <img src="eight.png" alt="">
+
+            <p>Scroll down to the bottom and you will find the options like bellow: </p>
+
+            <img src="nine.png" alt="">
+
+            <p>Click on <strong>Delete this repository</strong></p>
+
+            <img src="ten.png" alt="">
+
+            <p>To confirm the deletion process you have to type the text given over the text box. Then click the button bellow. The repository will be deleted permanently.</p>
+
+            <img src="eleven.png" alt="">
+
+            <p><strong style="color:rgb(14, 185, 28)">So, we have learned how to install git, how to create a repository, how to upload a file and how to delete the repository. Thank you very much for reading the article. Hope you are benifited by my effort. </strong></p>
+
+        </div>
+
+    </section>
+
+    <section class="algo-footer">
+
+        <img src="ceo 2.png" alt="" >
+            
+        <h1><snap class="s">S</snap>aad's <snap class="t">T</snap>eaching <snap class="p">P</snap>ortal <snap class="|" style="color: rgb(129, 127, 127)">&nbsp;&nbsp; | &nbsp;&nbsp;</snap><snap class="copy" >Copyright &copy; 2022 saadsteachingportal.com</snap></h1>
+        
+    </section>
+
+</body>
+</html>
