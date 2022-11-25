@@ -176,6 +176,13 @@ nav h1{
     font-weight: 600;
 }
 
+#algo-header {
+    color: #0caa0c;
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 70px;
+}
+
 .course p{ 
     font-size: 20px;
     font-weight: 300;
@@ -186,7 +193,7 @@ nav h1{
 }
 
 .row{
-    margin-top: 5%;
+    margin-top: 0.5%;
     display: flex;
     justify-content: space-between;
 }
@@ -269,6 +276,11 @@ nav h1{
 .algorithm-course-logo {
     padding-bottom: 40px;
     width: 67%;
+}
+
+.ds-course-logo {
+    padding-bottom: 40px;
+    width: 57%;
 }
 
 .C-course-logo {
@@ -878,7 +890,11 @@ nav h1{
 }
 
 #lec5cont1 {
-    width: 80%;
+    width: 90%;
+}
+
+#lec6cont1 {
+    width: 90%;
 }
 
 /* my Gadgets */
