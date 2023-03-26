@@ -594,6 +594,73 @@ nav h1{
     width: 70%;
 }
 
+.myInfo {
+    margin-top: 0px;
+    background-color: #fcfcfc;
+    margin-bottom: 0px;
+}
+
+.info-row {
+    padding-top: 4%;
+    margin-left: 20%;
+    margin-right: 25%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.info-col {
+    flex-basis: 100%;
+    /* background: white; */
+    /* border-radius: 10px; */
+    /* margin-bottom: 0%; */
+    /* padding: 40px 12px; */
+    /* box-sizing: border-box; */
+    /* transition: 0.5s; */
+    /* box-shadow: 0 0 40px 0px rgba(0,0,0,0.2); */
+}
+
+.info-col p {
+    padding-top: 40px;
+    font-weight: thin;
+    font-size: 16px;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    color:rgb(65, 65, 65)
+}
+
+.info-col h1 {
+    font-size: 60px;
+    font-weight: 500;
+    letter-spacing: 1.2px;
+    color: #0caa0c;
+}
+
+.info-col img {
+    width: 80%;
+}
+
+#details {
+    padding-top: 0px;
+    color: black;
+    font-size: 16px;
+}
+
+.personal-info {
+    padding-left: 6%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    background-color: #efffef;
+}
+
+.personal-info h1 {
+    color: #149414;
+    font-size: 28px;
+}
+
+.personal-info p{
+    font-size: 20px
+}
+
 /* Contact Page */
 
 .contact {
